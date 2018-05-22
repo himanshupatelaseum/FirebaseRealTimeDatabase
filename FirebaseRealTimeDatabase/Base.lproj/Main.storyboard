@@ -43,6 +43,20 @@
                                     <outlet property="delegate" destination="hcL-ho-Vdk" id="nBV-09-6je"/>
                                 </connections>
                             </tableView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e3K-uV-2sO">
+                                <rect key="frame" x="137" y="76" width="100" height="40"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="3h3-PY-A5U"/>
+                                    <constraint firstAttribute="width" constant="100" id="Aa0-Ju-9ae"/>
+                                </constraints>
+                                <state key="normal" title="New Feeds">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="actionNewFeeds:" destination="hcL-ho-Vdk" eventType="touchUpInside" id="B5f-3k-a1w"/>
+                                </connections>
+                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kFk-k7-xTH">
                                 <rect key="frame" x="0.0" y="617" width="375" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -53,9 +67,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="e3K-uV-2sO" firstAttribute="top" secondItem="Kbr-Ch-0FW" secondAttribute="top" constant="12" id="VjT-ff-Zfy"/>
                             <constraint firstItem="0cN-60-lt2" firstAttribute="leading" secondItem="Kbr-Ch-0FW" secondAttribute="leading" id="X40-VW-qNU"/>
                             <constraint firstItem="kFk-k7-xTH" firstAttribute="leading" secondItem="Kbr-Ch-0FW" secondAttribute="leading" id="XgT-a5-SIN"/>
                             <constraint firstItem="0cN-60-lt2" firstAttribute="top" secondItem="gKC-f8-iA2" secondAttribute="top" id="Ypj-UD-byP"/>
+                            <constraint firstItem="e3K-uV-2sO" firstAttribute="centerX" secondItem="gKC-f8-iA2" secondAttribute="centerX" id="ZIC-hl-K7a"/>
                             <constraint firstAttribute="bottom" secondItem="kFk-k7-xTH" secondAttribute="bottom" id="bLd-3V-2oL"/>
                             <constraint firstItem="Kbr-Ch-0FW" firstAttribute="trailing" secondItem="kFk-k7-xTH" secondAttribute="trailing" id="g71-UC-nQk"/>
                             <constraint firstItem="kFk-k7-xTH" firstAttribute="top" secondItem="0cN-60-lt2" secondAttribute="bottom" id="h0o-GR-zjH"/>
@@ -66,6 +82,7 @@
                     <navigationItem key="navigationItem" title="Test" id="6rv-Gm-Yjf"/>
                     <connections>
                         <outlet property="adView" destination="kFk-k7-xTH" id="7Kr-dV-OwG"/>
+                        <outlet property="btnNewFeeds" destination="e3K-uV-2sO" id="aEz-Y3-JNO"/>
                         <outlet property="tblView" destination="0cN-60-lt2" id="RCF-8u-z7s"/>
                     </connections>
                 </viewController>

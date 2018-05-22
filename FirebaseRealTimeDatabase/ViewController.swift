@@ -10,11 +10,11 @@ import UIKit
 import Firebase
 import GoogleMobileAds
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate {
 
     @IBOutlet weak var tblView: UITableView!
     var arrData = NSMutableArray()
-    
+    @IBOutlet weak var btnNewFeeds: UIButton!
     @IBOutlet weak var adView: UIView!
     var bannerView: GADBannerView!
     
@@ -35,6 +35,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             if !snapshot.exists() { return }
             print(snapshot)
             
+            let count = self.arrData.count
+            
             self.arrData = NSMutableArray()
             
             for i in (0..<snapshot.childrenCount).reversed() {
@@ -45,6 +47,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             }
             
             self.tblView.reloadData()
+            self.tblView.layoutIfNeeded()
+            
+            if count != self.arrData.count && (self.tblView.contentSize.height > self.tblView.frame.size.height) && count != 0 && self.tblView.contentOffset.y > 0 {
+                self.btnNewFeeds.isHidden = false
+            }
             
             UIApplication.shared.isNetworkActivityIndicatorVisible = false
         }        
@@ -71,6 +78,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             ])
     }
 
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        if scrollView.contentOffset.y <= 0 {
+            btnNewFeeds.isHidden = true
+        }
+    }
+    
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return arrData.count
@@ -104,6 +118,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return UITableViewAutomaticDimension
     }
 
+    @IBAction func actionNewFeeds(_ sender: Any) {
+        tblView.scrollToRow(at: IndexPath(row: 0, section: 0), at: .none, animated: true)
+        btnNewFeeds.isHidden = true
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
