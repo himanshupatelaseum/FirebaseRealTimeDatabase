@@ -23,10 +23,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         FirebaseApp.configure()
-        ref = Database.database().reference()
         Database.database().isPersistenceEnabled = true
-        let scoresRef = Database.database().reference(withPath: "scores")
+        let scoresRef = Database.database().reference()
         scoresRef.keepSynced(true)
+        ref = Database.database().reference()
         
         GADMobileAds.configure(withApplicationID: "ca-app-pub-3940256099942544~1458002511")
         
