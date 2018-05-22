@@ -8,5 +8,6 @@ target 'FirebaseRealTimeDatabase' do
 	pod 'Firebase/Core'
     pod 'Firebase/Database'
     pod 'Firebase/AdMob'
+    pod 'Firebase/Messaging'
 
 end

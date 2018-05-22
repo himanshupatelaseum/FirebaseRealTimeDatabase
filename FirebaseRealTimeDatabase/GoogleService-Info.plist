@@ -7,9 +7,9 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>802660402721-7ohk05bvvp9fid8pa01l3d83ju8mema9.apps.googleusercontent.com</string>
+	<string>802660402721-b3oab9vhmdtji00m217pjf3debrehf55.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.802660402721-7ohk05bvvp9fid8pa01l3d83ju8mema9</string>
+	<string>com.googleusercontent.apps.802660402721-b3oab9vhmdtji00m217pjf3debrehf55</string>
 	<key>API_KEY</key>
 	<string>AIzaSyCCsVvzIGMxK9sN-t7YWcoiaTxBTooWkHI</string>
 	<key>GCM_SENDER_ID</key>
@@ -17,7 +17,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.aseum.FirebaseRealTimeDatabase</string>
+	<string>com.aseum.pushNotificationDemo</string>
 	<key>PROJECT_ID</key>
 	<string>fir-realtimedatabase-e8ded</string>
 	<key>STORAGE_BUCKET</key>
@@ -33,7 +33,7 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:802660402721:ios:ff10a24698718053</string>
+	<string>1:802660402721:ios:ddde885a099a6c97</string>
 	<key>DATABASE_URL</key>
 	<string>https://fir-realtimedatabase-e8ded.firebaseio.com</string>
 </dict>
