@@ -26,7 +26,7 @@
             </objects>
             <point key="canvasLocation" x="-516" y="-188"/>
         </scene>
-        <!--Daily Quotes-->
+        <!--Test-->
         <scene sceneID="ngW-be-pxa">
             <objects>
                 <viewController id="hcL-ho-Vdk" customClass="ViewController" customModule="FirebaseRealTimeDatabase" customModuleProvider="target" sceneMemberID="viewController">
@@ -63,7 +63,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Kbr-Ch-0FW"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Daily Quotes" id="6rv-Gm-Yjf"/>
+                    <navigationItem key="navigationItem" title="Test" id="6rv-Gm-Yjf"/>
                     <connections>
                         <outlet property="adView" destination="kFk-k7-xTH" id="7Kr-dV-OwG"/>
                         <outlet property="tblView" destination="0cN-60-lt2" id="RCF-8u-z7s"/>
