@@ -37,7 +37,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             
             self.arrData = NSMutableArray()
             
-            for i in 0..<snapshot.childrenCount {
+            for i in (0..<snapshot.childrenCount).reversed() {
                 
                 if let text = snapshot.childSnapshot(forPath: "\(i)").value as? String {
                     self.arrData.add(text)
