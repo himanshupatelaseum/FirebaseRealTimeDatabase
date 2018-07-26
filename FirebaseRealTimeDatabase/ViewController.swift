@@ -10,6 +10,13 @@ import UIKit
 import Firebase
 import GoogleMobileAds
 
+class ViewControllerCell: UITableViewCell {
+    
+    @IBOutlet weak var imgView: UIImageView!
+    @IBOutlet weak var lblText: UILabel!
+    
+}
+
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate {
 
     @IBOutlet weak var tblView: UITableView!
@@ -92,15 +99,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
-        cell.textLabel?.text = arrData[indexPath.row] as? String
-        cell.textLabel?.numberOfLines = 0
-        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ViewControllerCell") as! ViewControllerCell
+        cell.lblText.text = arrData[indexPath.row] as? String
+
         if indexPath.row % 2 == 0 {
-            cell.contentView.backgroundColor = UIColor.white
+            cell.imgView.image = #imageLiteral(resourceName: "img_1")
         }
+//        else if indexPath.row % 2 == 0 {
+//            cell.imgView.image = #imageLiteral(resourceName: "img_2")
+//        }
         else {
-            cell.contentView.backgroundColor = UIColor.lightGray.withAlphaComponent(0.2)
+            cell.imgView.image = #imageLiteral(resourceName: "img_3")
         }
         
         return cell
